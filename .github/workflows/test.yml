@@ -10,3 +10,7 @@ jobs:
       - run: pip install nbformat ipykernel nbclient
       - run: quarto install tinytex
       - run: quarto render not.ipynb --execute --to pdf
+      - uses: actions/upload-artifact@v7
+        with:
+          path: ModelowanieUkladowPrzeplywowych/.github/workflows/wynikEuler.pdf
+          archive: false
