@@ -8,4 +8,5 @@ jobs:
       - uses: actions/checkout@v7
       - uses: quarto-dev/quarto-actions/setup@v2
       - run: pip install nbformat ipykernel nbclient
+      - run: quarto install tinytex
       - run: quarto render not.ipynb --execute --to pdf
